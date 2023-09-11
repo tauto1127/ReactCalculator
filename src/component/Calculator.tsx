@@ -5,7 +5,7 @@ import calculate, { State } from "../logic/calculate";
 
 export default function Calculator() {
     const [state, setState] = useState<State>({//分割代入？
-        currernt: "0",
+        current: '0',
         operand: 0,
         operator: undefined,
         isNextClear: false,
@@ -16,7 +16,7 @@ export default function Calculator() {
         setState(nextState);
     }
     return <div>
-        <Display/>
+        <Display value={state.current}/>
         <ButtonPanel buttonHandler={buttonHandler}/>
     </div>
 }
